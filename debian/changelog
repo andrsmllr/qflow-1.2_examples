@@ -1,0 +1,5 @@
+qrouter (1.2.31-1) unstable; urgency=low
+
+  * Initial release (Closes: #760629)
+
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Tue, 09 Sep 2014 22:48:19 +0200

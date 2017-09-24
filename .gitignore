@@ -1,0 +1,8 @@
+config.cache
+config.status
+config.log
+Makefile
+*.o
+*~
+UPDATE_ME
+VERSION
