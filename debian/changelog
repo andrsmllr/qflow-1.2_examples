@@ -1,0 +1,121 @@
+magic (8.0.207-0.1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * New upstream release
+
+ -- Ruben Undheim <ruben.undheim@gmail.com>  Sat, 30 May 2015 18:18:53 +0200
+
+magic (7.5.241-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Mon, 13 Oct 2014 11:11:14 +0200
+
+magic (7.5.240-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sun, 31 Aug 2014 14:51:35 +0200
+
+magic (7.5.239-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sat, 07 Jun 2014 16:16:29 +0200
+
+magic (7.5.236-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Thu, 29 May 2014 18:28:51 +0200
+
+magic (7.5.234-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/control:
+    - Standards-Version: 3.9.5
+    - Add wish and tclsh to Depends
+
+ -- Roland Stigge <stigge@antcom.de>  Sun, 18 May 2014 19:38:24 +0200
+
+magic (7.5.233-2) unstable; urgency=low
+
+  * Use autotools-dev to update config.{sub,guess} (Closes: #727452)
+
+ -- Roland Stigge <stigge@antcom.de>  Thu, 24 Oct 2013 11:33:36 +0200
+
+magic (7.5.233-1) unstable; urgency=low
+
+  * New upstream release
+  * Use readlink for /usr/bin/wish in magic to use versioned wish
+
+ -- Roland Stigge <stigge@antcom.de>  Thu, 17 Oct 2013 14:36:32 +0200
+
+magic (7.5.231-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Standards-Version: 3.9.4
+
+ -- Roland Stigge <stigge@antcom.de>  Wed, 15 May 2013 21:56:15 +0200
+
+magic (7.5.230-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Fri, 25 Jan 2013 11:10:07 +0100
+
+magic (7.5.229-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Mon, 08 Oct 2012 09:35:33 +0200
+
+magic (7.5.228-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Wed, 03 Oct 2012 12:14:31 +0200
+
+magic (7.5.225-1) experimental; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Tue, 25 Sep 2012 13:13:14 +0200
+
+magic (7.5.220-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Wed, 02 May 2012 20:45:37 +0200
+
+magic (7.5.218-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sat, 21 Apr 2012 09:26:03 +0200
+
+magic (7.5.216-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Fri, 06 Apr 2012 14:47:13 +0200
+
+magic (7.5.215-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control: Standards-Version: 3.9.3
+  * debian/compat: 9
+
+ -- Roland Stigge <stigge@antcom.de>  Sat, 10 Mar 2012 20:47:56 +0100
+
+magic (7.5.214-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Roland Stigge <stigge@antcom.de>  Sun, 27 Nov 2011 22:05:55 +0100
+
+magic (7.5.213-1) unstable; urgency=low
+
+  * Initial release (Closes: #365326)
+
+ -- Roland Stigge <stigge@antcom.de>  Tue, 26 Jul 2011 21:53:03 +0200

@@ -1,0 +1,2 @@
+?package(magic):needs="X11" section="Applications/Science/Electronics"\
+  title="magic" command="/usr/bin/magic"

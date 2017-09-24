@@ -1,0 +1,5 @@
+01-makefile-exit-on-error.patch
+03-makefile-install-html.patch
+04-fhs-images.patch
+05-readline-reference-removal.patch
+06-script-adjustments.patch

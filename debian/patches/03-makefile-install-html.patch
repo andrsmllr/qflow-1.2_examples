@@ -1,0 +1,15 @@
+Description: Install HTML docs to FHS conformant /usr/share
+ This patch changes a Makefile to install HTML docs to an FHS conformant dir
+Author: Roland Stigge <stigge@antcom.de>
+
+--- magic-7.5.213.orig/doc/html/Makefile
++++ magic-7.5.213/doc/html/Makefile
+@@ -2,7 +2,7 @@ MAGICDIR = ../..
+ 
+ include $(MAGICDIR)/defs.mak
+ 
+-HTML_INSTDIR=$(LIBDIR)/magic/doc/html
++HTML_INSTDIR=/usr/share/doc/magic/html
+ 
+ install: $(DESTDIR)${HTML_INSTDIR}
+ 	tar cf - . | (cd $(DESTDIR)${HTML_INSTDIR}; tar xf - )
