@@ -1,0 +1,39 @@
+Description: Adding DESTDIR to the install target
+  in the Makefile.
+Forwarded: will do
+Author: Ruben Undheim <ruben.undheim@gmail.com>
+===================================================================
+Index: qrouter-1.2.31/Makefile.in
+===================================================================
+--- qrouter-1.2.31.orig/Makefile.in
++++ qrouter-1.2.31/Makefile.in
+@@ -84,19 +84,19 @@ qrouterexec$(EXEEXT): $(OBJECTS3)
+ 
+ install-nointerp:
+ 	@echo "Installing qrouter"
+-	$(INSTALL) -d ${BININSTALL}
+-	$(INSTALL) qrouter ${BININSTALL}
++	$(INSTALL) -d $(DESTDIR)${BININSTALL}
++	$(INSTALL) qrouter $(DESTDIR)${BININSTALL}
+ 
+ install-tcl: qrouter.sh qrouter.tcl qrouter$(SHDLIB_EXT) qrouterexec$(EXEEXT)
+ 	@echo "Installing qrouter"
+-	$(INSTALL) -d ${BININSTALL}
+-	$(INSTALL) -d ${LIBINSTALL}
+-	$(INSTALL) qrouter.sh ${BININSTALL}/qrouter
+-	$(INSTALL) qrouter$(SHDLIB_EXT) ${LIBINSTALL}
+-	$(INSTALL) qrouterexec$(EXEEXT) ${LIBINSTALL}
+-	$(INSTALL) console.tcl ${LIBINSTALL}
+-	$(INSTALL) tkcon.tcl ${LIBINSTALL}
+-	$(INSTALL) qrouter.tcl ${LIBINSTALL}
++	$(INSTALL) -d $(DESTDIR)${BININSTALL}
++	$(INSTALL) -d $(DESTDIR)${LIBINSTALL}
++	$(INSTALL) qrouter.sh $(DESTDIR)${BININSTALL}/qrouter
++	$(INSTALL) qrouter$(SHDLIB_EXT) $(DESTDIR)${LIBINSTALL}
++	$(INSTALL) qrouterexec$(EXEEXT) $(DESTDIR)${LIBINSTALL}
++	$(INSTALL) -m 0644 console.tcl $(DESTDIR)${LIBINSTALL}
++	$(INSTALL) tkcon.tcl $(DESTDIR)${LIBINSTALL}
++	$(INSTALL) -m 0644 qrouter.tcl $(DESTDIR)${LIBINSTALL}
+ 
+ uninstall:
+ 	$(RM) ${BININSTALL}/qrouter

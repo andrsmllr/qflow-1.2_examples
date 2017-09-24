@@ -1,0 +1,52 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" (C) Copyright 2014 Ruben Undheim <ruben.undheim@gmail.com>,
+.TH QROUTER 1 "April 28, 2014"
+.SH NAME
+qrouter \- Multi-level, over-the-cell maze router
+.SH SYNOPSIS
+.B qrouter
+.RI [ options ] " design_name"
+.br
+.SH DESCRIPTION
+This manual page documents briefly the
+.B qrouter
+command.
+.PP
+Qrouter is a tool to generate metal layers and vias to physically connect
+together a netlist in a VLSI fabrication technology. It is a maze router,
+otherwise known as an "over-the-cell" router or "sea-of-gates" router.
+That is, unlike a channel router, it begins with a description of placed
+standard cells, usually packed together at minimum spacing, and places
+metal routes over the standard cells.
+
+Qrouter uses the open standard LEF and DEF formats as file input and
+output. It takes the cell definitions from a LEF file, and analyzes the
+geometry for each cell to determine contact points and route
+obstructions. It then reads the cell placement, pin placement, and
+netlist from a DEF file, performs the detailed route, and writes an
+annotated DEF file as output.
+.\" TeX users may be more comfortable with the \fB<whatever>\fP and
+.\" \fI<whatever>\fP escape sequences to invode bold face and italics,
+.\" respectively.
+.SH OPTIONS
+.TP
+.B \-c <file>
+Configuration file name (if not route.cfg)
+.TP
+.B \-v <level>
+Verbose output level
+.TP
+.B \-i <name>
+Print route names and pitches and exit
+.TP
+.B \-p <name>
+Specify global power bus name
+.TP
+.B \-g <name>
+Specify global ground bus name
+
+.SH AUTHOR
+qrouter was written by Tim Edwards <tim@opencircuitdesign.com>.
+.PP
+This manual page was written by Ruben Undheim <ruben.undheim@gmail.com>,
+for the Debian project (and may be used by others).

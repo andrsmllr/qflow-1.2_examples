@@ -1,0 +1,23 @@
+Description: Passing down CFLAGS and LDFLAGS
+  so that hardening is activated and such that
+  it's not linking with unused libraries.
+Forwarded: will do
+Author: Ruben Undheim <ruben.undheim@gmail.com>
+Index: qrouter-1.2.29/Makefile.in
+===================================================================
+--- qrouter-1.2.29.orig/Makefile.in	2014-09-07 19:38:14.893299598 +0200
++++ qrouter-1.2.29/Makefile.in	2014-09-07 19:38:22.269299551 +0200
+@@ -3,11 +3,11 @@
+ #
+ 
+ # Main compiler arguments
+-CFLAGS = @CFLAGS@
++CFLAGS += @CFLAGS@
+ CPPFLAGS = @CPPFLAGS@
+ DEFS = @DEFS@
+ LIBS = @LIBS@
+-LDFLAGS = @LDFLAGS@
++LDFLAGS += @LDFLAGS@
+ LDDL_FLAGS = @LDDL_FLAGS@
+ LD_RUN_PATH = @LD_RUN_PATH@
+ SHLIB_CFLAGS = @SHLIB_CFLAGS@
