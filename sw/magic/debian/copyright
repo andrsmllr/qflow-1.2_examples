@@ -1,0 +1,33 @@
+Format: http://dep.debian.net/deps/dep5
+Upstream-Name: magic
+Source: http://www.opencircuitdesign.com/magic/index.html
+
+Files: *
+Copyright: 2010 Tim Edwards (Johns Hopkins APL)
+           2010 Mike Godfrey (Stanford, Pixeldevices)
+           2010 Wes Hansford (MOSIS)
+           2010 Rajit Manohar (Cornell) 
+           2010 Mika Nyström (Caltech)
+           2010 Philippe Pouliquen (Johns Hopkins University)
+           2010 Stefanos Sidiropolous (Aeluros)
+           2010 Jeff Solomon (Stanford)
+           2010 Jeff Sondeen (USC)
+           2010 Holger Vogt (Fraunhofer-Institut IMS, Duisburg, Germany) 
+License: BSD style:
+    ********************************************************************* 
+    * Copyright (C) 1985, 1990 Regents of the University of California. * 
+    * Permission to use, copy, modify, and distribute this              * 
+    * software and its documentation for any purpose and without        * 
+    * fee is hereby granted, provided that the above copyright          * 
+    * notice appear in all copies.  The University of California        * 
+    * makes no representations about the suitability of this            * 
+    * software for any purpose.  It is provided "as is" without         * 
+    * express or implied warranty.  Export of this software outside     * 
+    * of the United States of America may require an export license.    * 
+    *********************************************************************
+
+Files: debian/*
+Copyright: 2011 Roland Stigge <stigge@antcom.de>
+License: BSD style (as above)
+ The Debian packaging of this package can be distributed with the same license
+ as the package itself.

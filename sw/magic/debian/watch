@@ -1,0 +1,3 @@
+# until magic 8.0 is released as "stable", we stick to the 7.x line
+version=3
+http://opencircuitdesign.com/magic/download.html .*magic-(7.*).tgz

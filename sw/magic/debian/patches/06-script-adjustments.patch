@@ -1,0 +1,44 @@
+Description: Various #! script adjustments for Tcl scripts
+ This patch adjusts some Tcl scripts to Debian file locations
+Author: Roland Stigge <stigge@antcom.de>
+
+Index: magic/tcltk/console.tcl
+===================================================================
+--- magic.orig/tcltk/console.tcl
++++ magic/tcltk/console.tcl
+@@ -1,3 +1,5 @@
++#!/usr/bin/tclsh
++#
+ # console.tcl:
+ #
+ #  Defines Procedures which should be defined within the console
+Index: magic/tcltk/strip_reflibs.tcl
+===================================================================
+--- magic.orig/tcltk/strip_reflibs.tcl
++++ magic/tcltk/strip_reflibs.tcl
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/tclsh
++#!/usr/bin/tclsh
+ #
+ # Strip GDS cell references from magic files.
+ #
+Index: magic/ext2spice/spice2sim
+===================================================================
+--- magic.orig/ext2spice/spice2sim
++++ magic/ext2spice/spice2sim
+@@ -1,4 +1,4 @@
+-#!/bin/awk -f
++#!/usr/bin/awk -f
+ # convert an ext2spice produced file to a .sim file for debugging
+ #
+ BEGIN {
+Index: magic/tcltk/drc.tcl
+===================================================================
+--- magic.orig/tcltk/drc.tcl
++++ magic/tcltk/drc.tcl
+@@ -1,4 +1,4 @@
+-#!/bin/tclsh
++#!/usr/bin/tclsh
+ #----------------------------------------------
+ # Dump a file of DRC errors from magic
+ #----------------------------------------------

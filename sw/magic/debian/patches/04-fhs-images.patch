@@ -1,0 +1,59 @@
+Description: Move images to an FHS conformant directory
+ This patch moves some XBM images to an FHS conformant directory in /usr/share
+Author: Roland Stigge <stigge@antcom.de>
+
+Index: magic/tcltk/wrapper.tcl
+===================================================================
+--- magic.orig/tcltk/wrapper.tcl
++++ magic/tcltk/wrapper.tcl
+@@ -25,19 +25,19 @@ if {[lsearch [namespace children] ::tksh
+ # Button images
+ 
+ set Glyph(up) [image create bitmap \
+-	-file ${CAD_ROOT}/magic/tcl/bitmaps/up.xbm \
++	-file /usr/share/magic/bitmaps/up.xbm \
+ 	-background gray -foreground steelblue]
+ set Glyph(down) [image create bitmap \
+-	-file ${CAD_ROOT}/magic/tcl/bitmaps/down.xbm \
++	-file /usr/share/magic/bitmaps/down.xbm \
+ 	-background gray -foreground steelblue]
+ set Glyph(left) [image create bitmap \
+-	-file ${CAD_ROOT}/magic/tcl/bitmaps/left.xbm \
++	-file /usr/share/magic/bitmaps/left.xbm \
+ 	-background gray -foreground steelblue]
+ set Glyph(right) [image create bitmap \
+-	-file ${CAD_ROOT}/magic/tcl/bitmaps/right.xbm \
++	-file /usr/share/magic/bitmaps/right.xbm \
+ 	-background gray -foreground steelblue]
+ set Glyph(zoom) [image create bitmap \
+-	-file ${CAD_ROOT}/magic/tcl/bitmaps/zoom.xbm \
++	-file /usr/share/magic/bitmaps/zoom.xbm \
+ 	-background gray -foreground steelblue]
+ 
+ # Menu button callback functions
+Index: magic/magic/Makefile
+===================================================================
+--- magic.orig/magic/Makefile
++++ magic/magic/Makefile
+@@ -20,7 +20,7 @@ EXTRA_LIBS = ${MAGICDIR}/cmwind/libcmwin
+ 	    ${MAIN_EXTRA_LIBS}
+ 
+ BITMAPS = up.xbm down.xbm left.xbm right.xbm zoom.xbm
+-DEST_XBM = $(BITMAPS:%=$(DESTDIR)${TCLDIR}/bitmaps/%)
++DEST_XBM = $(BITMAPS:%=$(DESTDIR)/usr/share/magic/bitmaps/%)
+ 
+ DFLAGS += -DMAGIC_DATE="\"`date`\""
+ LIBS   += ${GR_LIBS} ${READLINE_LIBS} -lm ${LD_EXTRA_LIBS} \
+@@ -51,9 +51,9 @@ $(DESTDIR)${TCLDIR}/tclmagic${SHDLIB_EXT
+ 	${RM} $(DESTDIR)${TCLDIR}/tclmagic${SHDLIB_EXT}
+ 	${CP} tclmagic${SHDLIB_EXT} $(DESTDIR)${TCLDIR}/tclmagic${SHDLIB_EXT}
+ 
+-$(DESTDIR)${TCLDIR}/bitmaps/%: bitmaps/%
+-	${RM} $(DESTDIR)${TCLDIR}/bitmaps/$*
+-	${CP} bitmaps/$* $(DESTDIR)${TCLDIR}/bitmaps/$*
++$(DESTDIR)/usr/share/magic/bitmaps/%: bitmaps/%
++	${RM} $(DESTDIR)/usr/share/magic/bitmaps/$*
++	${CP} bitmaps/$* $(DESTDIR)/usr/share/magic/bitmaps/$*
+ 
+ $(DESTDIR)${SYSDIR}/.magicrc: proto.magicrc
+ 	${RM} $(DESTDIR)${SYSDIR}/.magicrc

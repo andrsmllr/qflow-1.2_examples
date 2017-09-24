@@ -1,0 +1,8 @@
+magic for Debian
+----------------
+
+The following changes have been done to the upstream tarball on repackaging:
+
+* Removed directory magic/ to prevent dpkg confusion
+* Removed scripts/config.cache
+* Removed readline/ embedded library
