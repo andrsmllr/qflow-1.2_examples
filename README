@@ -1,1 +1,20 @@
 Examples for the open source digital synthesis flow Qflow 1.2.
+
+How to get started:
+
+Installation on Ubuntu (16.04 LTS or later):
+For Ubuntu (and possibly other Debian-based distributions) the default package
+repository contains packages for very conveniant installation of qflow.
+Running install.sh will install all required packages directly from
+the package repository.
+The techonolgy files for the osu035 process will also be installed by default.
+
+Installation on other Linux distribution:
+This repository contains all dependencies for the Qflow open source digital
+synthesis flow in the ./sw folder as git submodules.
+Please go through each of the folders under ./sw and follow the respective
+installation instructions.
+
+After you have finished installation you can go to ./examples to get down to
+business. There are several examples trying to showcase the basic features of
+Qflow in very simple steps.
